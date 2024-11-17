@@ -31,3 +31,29 @@ TextStyle mTextStyle15(
       Color mFontColor = Colors.black}) {
   return TextStyle(fontSize: 15, fontWeight: mFontWeigh, color: mFontColor);
 }
+
+
+
+/// coustom
+
+class DecorationUtils{
+  static InputDecoration mTextField({double mBorderRadius=11,Color mColor=Colors.black,required String hintText,required String label})=>InputDecoration(
+    hintText: hintText,
+    labelText: label,
+    enabledBorder: OutlineInputBorder(
+      borderRadius:BorderRadius.circular(mBorderRadius),
+      borderSide: BorderSide(color: mColor),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(mBorderRadius),
+      borderSide: BorderSide(color: mColor),
+    )
+  );
+}
+
+class SizedBoxUtil{
+  static SizedBox mSizedBox({double mWidth=11,double mHeight=11})=>SizedBox(
+    width:mWidth,
+    height: mHeight
+  );
+}
